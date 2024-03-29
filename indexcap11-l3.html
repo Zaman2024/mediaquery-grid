@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAP-11 CSS Media queries & Deployment||L3</title>
+    <style>
+        body{
+            display:grid;
+            margin: auto;
+            overflow-x: hidden;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        body> div{
+            display: grid;
+            text-align: center;
+            margin: auto;
+            width: 40%;
+        }
+        body>div~div{
+            display: grid;;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin:auto;
+            width: 100%;
+            padding: 10px;
+        }
+
+        img{
+            border-radius: 10px 10px 0px 0px;
+            width: 300px;
+            height: auto;
+            
+        }
+        .grid>div{
+            padding: 5px;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.1),
+                        -5px 5px 16px rgba(0, 0, 0, 0.1),
+                        -1px -5px 16px rgba(0, 0, 0, 0.1);
+            width: 310px;
+            height:auto;
+            text-align: center;
+        }
+        div>img~div{
+            padding: 5px;
+            margin-bottom: 10px;
+
+        }
+        h3,h6,p{
+            margin:3px;
+        }
+        body>:last-of-type{
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            margin: auto;
+            padding: 30px;
+            width: 85%;
+            
+        }
+        body>:last-of-type>div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* display: grid;
+            grid-template-columns: repeat(2, 1fr); */
+            & >img{
+                display: grid;
+                margin: auto;
+                width: 80px;
+                height: auto;
+            }
+            & img ~div{
+                width: 250px;
+                text-align: left;
+                }
+        }
+        @media only screen and (max-width:576px) {
+            body>div{
+            display: grid;
+            text-align: center;
+            margin: 37px;
+        }
+            body>div~div{
+            display: grid;;
+            grid-template-columns: repeat(1, 1fr);
+            margin: auto;
+        }
+        body>:last-of-type{
+            grid-template-columns: repeat(1, 1fr);
+            margin: auto;
+
+        }
+        }
+        @media only screen and (min-width:577px) and (max-width:768px) {
+            body>:last-of-type{
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+        body>div~div{
+            display: grid;;
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Certified Teacher</h1>
+        <p>Separated they live in. A small river named Duden flows by their place and  supplies it with the necessary regelialia. It is paradisematic country</p>
+    </div>
+    
+    <div class="grid">
+        <div>
+            <img src="img1.jpg" alt="">
+            <div>
+                <h3>Wilson</h3>
+                <h6>TEACHER</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, reprehenderit</p>
+            </div>
+        </div>
+        <div>
+            <img src="img1.jpg" alt="">
+            <h3>Wilson</h3>
+            <h6>TEACHER</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, reprehenderit</p>
+        </div>
+        <div>
+            <img src="img1.jpg" alt="">
+            <h3>Wilson</h3>
+            <h6>TEACHER</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, reprehenderit</p>
+        </div>
+        <div>
+            <img src="img1.jpg" alt="">
+            <h3>Wilson</h3>
+            <h6>TEACHER</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, reprehenderit</p>
+        </div>
+    </div> 
+    <div class="grid2">
+        <div>
+            <img src="images.png" alt="">
+            <div>
+                <h2>Business School</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Magnam aut tempore, velit quiaenim nostrum iure illum similique,magni repellendus</p>
+            </div>
+        </div>
+        <div>
+            <img src="images.png" alt="">
+            <div>
+                <h2>Business School</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Magnam aut tempore, velit quiaenim nostrum iure illum similique,magni repellendus</p>
+            </div>
+        </div>
+        <div>
+            <img src="images.png" alt="">
+            <div>
+                <h2>Business School</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Magnam aut tempore, velit quiaenim nostrum iure illum similique,magni repellendus</p>
+            </div>
+        </div>
+        <div>
+            <img src="images.png" alt="">
+            <div>
+                <h2>Business School</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Magnam aut tempore, velit quiaenim nostrum iure illum similique,magni repellendus</p>
+            </div>
+        </div>
+        <div>
+            <img src="images.png" alt="">
+            <div>
+                <h2>Business School</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Magnam aut tempore, velit quiaenim nostrum iure illum similique,magni repellendus</p>
+            </div>
+        </div>
+        <div>
+            <img src="images.png" alt="">
+            <div>
+                <h2>Business School</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Magnam aut tempore, velit quiaenim nostrum iure illum similique,magni repellendus</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
